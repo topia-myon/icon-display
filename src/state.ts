@@ -17,15 +17,15 @@ const getRandomUnitVector = (): Vector3 => {
 };
 
 const iconUrls = [
-  "/assets/icons/rui-3-hearts.png",
-  "/assets/icons/rui-default.png",
-  "/assets/icons/rui-innocent.png",
-  "/assets/icons/rui-kissing.png",
-  "/assets/icons/rui-melting.png",
-  "/assets/icons/rui-mogumogu.png",
-  "/assets/icons/rui-pien.png",
-  "/assets/icons/rui-smiling-tear.png",
-  "/assets/icons/rui-zany.png",
+  "./assets/icons/rui-3-hearts.png",
+  "./assets/icons/rui-default.png",
+  "./assets/icons/rui-innocent.png",
+  "./assets/icons/rui-kissing.png",
+  "./assets/icons/rui-melting.png",
+  "./assets/icons/rui-mogumogu.png",
+  "./assets/icons/rui-pien.png",
+  "./assets/icons/rui-smiling-tear.png",
+  "./assets/icons/rui-zany.png",
 ];
 export const items: Item[] = iconUrls.map((url) => {
   const axis = getRandomUnitVector();
