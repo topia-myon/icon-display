@@ -39,9 +39,11 @@ function App() {
           item.speed = item.speed * (1 - weight) +
             item.maxSpeed * weight;
         }
-        for (const [key, value] of Object.entries(itemToStyle(item))) {
-          document.getElementById(item.url)!
-            .style[key as keyof ReturnType<typeof itemToStyle>] = value;
+        const el = document.getElementById(item.url);
+        if (el) {
+          for (const [key, value] of Object.entries(itemToStyle(item))) {
+            el.style[key as keyof ReturnType<typeof itemToStyle>] = value;
+          }
         }
       }
     }
@@ -59,7 +61,7 @@ function App() {
       className={tw`w-full h-full bg-gray-100 flex justify-center items-center overflow-hidden`}
     >
       <div
-        className={tw`portrait:w-full landscape:h-full bg-white relative`}
+        className={tw`portrait:w-full landscape:h-full relative`}
         style={{ aspectRatio: "1 / 1" }}
       >
         {items.map((item) => (
